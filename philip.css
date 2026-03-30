@@ -1,0 +1,125 @@
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+ul li {
+    list-style-type: none; 
+}
+
+
+a {
+    text-decoration: none; 
+}
+
+
+header {
+    width: 100%; /* Full width of the viewport */
+    height: 4.5rem; /* Fixed height (1rem = 16px, so 4.5rem = 72px) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Bottom border with 30% opacity black */
+    background-color: #f6f6f6; /* Light gray background */
+    position: sticky; /* Stays fixed when scrolling past it */
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 50; /* Ensures header appears above other content (higher number = closer to viewer) */
+}
+
+
+header nav {
+    width: 100%; /* Full width of header */
+    height: 100%; /* Full height of header */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Push items to far left and far right */
+    align-items: center; /* Vertically center all items */
+    position: relative; /* Allows absolute positioning of child elements */
+    padding: 0 1rem; /* No top/bottom padding, 1rem (16px) left/right padding */
+}
+
+
+header .desktop-nav-links,
+header nav > a {
+    display: none; /* Completely hide these elements */
+}
+
+
+.logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+
+ ul.mobile-dropdown {
+    position: absolute; 
+    right: 0; 
+    top: 100%;
+    background-color: #f6f6f6; 
+    border-left: 1px solid rgba(0, 0, 0, 0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3); 
+    width: 60%; 
+    max-width: 12rem; 
+    height: calc(100vh - 4.5rem); 
+    padding: 2rem 1rem; 
+    display: none; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+}
+
+
+.mobile a {
+    color: black; 
+    font-weight: 500; 
+    font-size: 0.95rem; 
+}
+
+
+.mobile button {
+    font-size: 1.1rem; 
+}
+
+
+
+@media (min-width: 768px) {
+    
+
+} 
+
+
+@media (min-width: 1000px) {
+    
+    
+    .mobile {
+        display: none; 
+    }
+
+    header nav > a {
+        display: inline-block;
+    }
+
+  
+    header .desktop-nav-links {
+        display: flex; 
+        gap: 2rem; 
+    }
+
+   
+    header .desktop-nav-links a
+     {
+        color: black; 
+        font-weight: 600; 
+        font-size: 0.95rem; 
+    }
+  
+}
+
+
+@media (min-width: 1500px) {
+     
+    header nav {
+        width: 80%; 
+        max-width: 80rem; 
+        margin: 0 auto; 
+    }
+}
